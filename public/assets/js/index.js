@@ -1,17 +1,15 @@
-var naming = document.getElementById("naming").value;
-var emailing = document.getElementById("emailing").value;
-var messaging = document.getElementById("messaging").value;
+document.addEventListener('DOMContentLoaded', async function ()  {
+	const firebaseConfig = {
+		apiKey: "AIzaSyCikzLS8jGj_ZfXO_BO9GeiYP-mUnaVX28",
+		authDomain: "fbla-7f5f5.firebaseapp.com",
+		databaseURL: "https://fbla-7f5f5-default-rtdb.firebaseio.com",
+		projectId: "fbla-7f5f5",
+		storageBucket: "fbla-7f5f5.appspot.com",
+		messagingSenderId: "404131537182",
+		appId: "1:404131537182:web:53ce36080baf521e6ca90f",
+		measurementId: "G-GH9CT5V253"
+	  };
+	  import { getAnalytics } from "firebase/analytics";
 
-function sendEmail() {
-	Email.send({
-	Host: "smtp.gmail.com",
-	Username : "noreplyghsfbla@gmail.com",
-	Password : "GHSFBLA2021",
-	To : 'bxu@cherrycreekschools.org',
-	From : "noreplyghsfbla@gmail.com",
-	Subject : naming,
-	Body : emailing + messaging,
-	}).then(
-		message => alert("mail sent successfully")
-	);
-}
+	const analytics = getAnalytics();
+})
